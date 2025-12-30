@@ -6,10 +6,19 @@ Web-based dashboard for monitoring sensor status in real-time.
 
 ## Features
 
-- **Real-time Monitoring** - Live sensor status updates
-- **Web Interface** - Clean dashboard UI with responsive design
+- **Near Real-time Monitoring** - Live sensor status updates
+- **Web Interface** - Clean dashboard UI
 - **Docker Support** - Containerized deployment with Docker Compose
 - **Configuration** - Environment-based setup via `.env` file
+
+## Data Sources
+
+- **LibreNMS**
+- **Healthchecks.io**
+- **SMTP2Go**
+- **BackBlaze**
+- **Mullvad**
+- **Twilio**
 
 ## Tech Stack
 
