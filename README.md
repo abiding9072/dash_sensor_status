@@ -42,12 +42,12 @@ docker-compose up
 
 ## Data Sources
 
-- **LibreNMS**
-- **Healthchecks.io**
+- **LibreNMS**         # Main Dash
+- **Healthchecks.io**  # Down Checks
 - **SMTP2Go**
 - **BackBlaze**
 - **Mullvad**
-- **Twilio**
+- **Twilio**           # Twil Bal
 
 NOTE: The background color changes based on number of active alerts, and the bottom row shows information from different sources.
 
