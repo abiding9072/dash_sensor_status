@@ -11,15 +11,6 @@ Web-based dashboard for monitoring sensor status in real-time.
 - **Docker Support** - Containerized deployment with Docker Compose
 - **Configuration** - Environment-based setup via `.env` file
 
-## Data Sources
-
-- **LibreNMS**
-- **Healthchecks.io**
-- **SMTP2Go**
-- **BackBlaze**
-- **Mullvad**
-- **Twilio**
-
 ## Tech Stack
 
 Python, Flask, HTML/CSS, Docker
@@ -49,7 +40,14 @@ docker-compose up
 └── compose.yaml        # Docker orchestration
 ```
 
-## Image(s)
+## Data Sources
+
+- **LibreNMS**
+- **Healthchecks.io**
+- **SMTP2Go**
+- **BackBlaze**
+- **Mullvad**
+- **Twilio**
 
 NOTE: The background color changes based on number of active alerts, and the bottom row shows information from different sources.
 
