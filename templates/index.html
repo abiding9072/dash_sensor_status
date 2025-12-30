@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LibreNMS Alert Monitor</title>
+    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="refresh" content="60"> <!-- Refresh every 60 seconds -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+    body.green { background-color: #32CD32; }
+    body.orange { background-color: #FFA500; }
+    body.red { background-color: #FF0000; }
+    </style>
+
+</head>
+<body class="{{ status }}">
+    <div class="container">
+        <h1>{{ message }}</h1>
+        <div id="alert-list">
+          {% if alerts is string %}
+            <p>{{ alerts }}</p>
+          {% else %}
+            {% for alert in alerts %}
+              <div class="alert-line">
+                {{ alert.hostname }} || {{ alert.rule }}
+                {% if alert.services %}
+                   || {{ alert.services | join(", ") }}
+                {% endif %}
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+    </div>
+    <div id="stats-bar">
+      {% for stat in stats %}
+        <div class="stat-box">
+          <div class="stat-title">{{ stat.title }}</div>
+          <div class="stat-value">{{ stat.value }}</div>
+        </div>
+      {% endfor %}
+    </div>
+</body>
+</html>
